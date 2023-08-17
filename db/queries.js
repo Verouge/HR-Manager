@@ -58,6 +58,17 @@ class DBQueries {
       employeeId,
     ]);
   }
+
+  viewEmployeesByManager(managerId) {
+    return db.query(
+      `SELECT e.id, e.first_name, e.last_name, role.title, department.name AS department, role.salary 
+         FROM employee e 
+         LEFT JOIN role ON e.role_id = role.id 
+         LEFT JOIN department ON role.department_id = department.id 
+         WHERE e.manager_id = ?`,
+      [managerId]
+    );
+  }
 }
 
 module.exports = new DBQueries();

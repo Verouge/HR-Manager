@@ -1,9 +1,16 @@
-const inquirer = require("inquirer");
+const promptForManager = require("../utils/promptForManager");
 const queries = require("../db/queries");
-// Other imports...
 
 async function viewEmployeesByManager() {
-  // Your logic to view employees by their manager
+  // Use the utility function to get the managerId
+  const managerId = await promptForManager();
+
+  // Use the managerId to get employees by that manager
+  const employees = await queries.viewEmployeesByManager(managerId);
+
+  console.table(employees[0]);
+
+  return employees[0];
 }
 
 module.exports = viewEmployeesByManager;
