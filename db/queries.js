@@ -51,7 +51,13 @@ class DBQueries {
     ]);
   }
 
-  // ... any other utility methods ...
+  // Update an employee's manager
+  updateEmployeeManager(employeeId, managerId) {
+    return db.query("UPDATE employee SET manager_id = ? WHERE id = ?", [
+      managerId,
+      employeeId,
+    ]);
+  }
 }
 
 module.exports = new DBQueries();
