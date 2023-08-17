@@ -12,7 +12,6 @@ This command-line application is designed for business owners seeking a streamli
 
 - [Getting Started](#getting-started)
   - [Cloning the Repository](#cloning-the-repository)
-  - [Install Dependencies](#install-dependencies)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
