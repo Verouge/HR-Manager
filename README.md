@@ -1,6 +1,8 @@
 # HR Manager
 
-[![License: Unlicense](https://img.shields.io/badge/License -MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![NPM-Package:](https://img.shields.io/badge/NPM_Package-MySQL2@3.6.0-blue.svg)](https://www.npmjs.com/package/mysql2)
+[![NPM-Package: Inquirer@8.2.4](https://img.shields.io/badge/NPM_Package-Inquirer@8.2.4-lightgreen.svg)](https://www.npmjs.com/package/inquirer)
 
 ## Description
 
@@ -92,6 +94,8 @@ git clone 'git@github.com:Verouge/HR-Manager.git'
 
    - To end your session and exit the application, select the Exit option from the main menu or simply close your terminal.
 
+![](/assets/demo.gif)
+
 ## Contributing
 
 Please contact me to add your contributions
@@ -113,6 +117,18 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 ## Credits
 
 ## Acknowledgements
+
+## Technologies and Tools Used
+
+This project leverages a range of technologies and tools to deliver a streamlined HR management experience:
+
+- **MySQL**: A reliable and efficient relational database system that forms the backbone of our data storage solution. [Official website](https://www.mysql.com/)
+
+- **Inquirer**: A command line user interface toolkit for Node.js, facilitating interactive prompts and user inputs for our application. [View on npm](https://www.npmjs.com/package/inquirer)
+
+- **Node.js**: The runtime environment that allows us to execute server-side JavaScript code, making dynamic data operations possible.
+
+- **MySQL2**: A MySQL driver for Node.js, providing asynchronous (non-blocking) operations for enhanced performance. [View on npm](https://www.npmjs.com/package/mysql2)
 
 ## Questions
 
