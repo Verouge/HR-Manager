@@ -94,6 +94,19 @@ class DBQueries {
   deleteEmployee(employeeId) {
     return db.query("DELETE FROM employee WHERE id = ?", [employeeId]);
   }
+
+  // View total utilized budget of a department
+  viewBudgetByDepartment(departmentId) {
+    return db.query(
+      `SELECT department.name AS department, SUM(role.salary) AS total_budget 
+         FROM employee 
+         JOIN role ON employee.role_id = role.id 
+         JOIN department ON role.department_id = department.id 
+         WHERE department.id = ?
+         GROUP BY department.name`,
+      [departmentId]
+    );
+  }
 }
 
 module.exports = new DBQueries();
