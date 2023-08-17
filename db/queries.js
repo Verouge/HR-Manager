@@ -33,13 +33,11 @@ class DBQueries {
 
   // Add a role
   addRole(data) {
-    // Ensure the 'data' object passed to this function contains a 'department_id'
     return db.query("INSERT INTO role SET ?", data);
   }
 
   // Add an employee
   addEmployee(data) {
-    // Ensure the 'data' object passed to this function contains both 'role_id' and 'manager_id' (if applicable)
     return db.query("INSERT INTO employee SET ?", data);
   }
 
@@ -80,6 +78,21 @@ class DBQueries {
          WHERE department.id = ?`,
       [departmentId]
     );
+  }
+
+  // Delete a department
+  deleteDepartment(departmentId) {
+    return db.query("DELETE FROM department WHERE id = ?", [departmentId]);
+  }
+
+  // Delete a role
+  deleteRole(roleId) {
+    return db.query("DELETE FROM role WHERE id = ?", [roleId]);
+  }
+
+  // Delete an employee
+  deleteEmployee(employeeId) {
+    return db.query("DELETE FROM employee WHERE id = ?", [employeeId]);
   }
 }
 
