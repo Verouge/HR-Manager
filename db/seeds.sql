@@ -1,8 +1,3 @@
--- Clear existing data
-DELETE FROM employee;
-DELETE FROM role;
-DELETE FROM department;
-
 -- Insert sample departments
 INSERT INTO department (name) VALUES 
 ('Sales'),
@@ -45,4 +40,3 @@ INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
 ('Ivy', 'Red', 12, 4),         -- HR Associate under Michael Johnson
 ('Jack', 'Gray', 12, 4),       -- HR Associate under Michael Johnson
 ('Kelly', 'Yellow', 13, 4);    -- HR Intern under Michael Johnson
-
