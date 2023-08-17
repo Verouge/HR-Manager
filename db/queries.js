@@ -33,11 +33,13 @@ class DBQueries {
 
   // Add a role
   addRole(data) {
+    // Ensure the 'data' object passed to this function contains a 'department_id'
     return db.query("INSERT INTO role SET ?", data);
   }
 
   // Add an employee
   addEmployee(data) {
+    // Ensure the 'data' object passed to this function contains both 'role_id' and 'manager_id' (if applicable)
     return db.query("INSERT INTO employee SET ?", data);
   }
 
@@ -49,7 +51,7 @@ class DBQueries {
     ]);
   }
 
-  // You can expand on these queries to cover more cases or to provide more utility.
+  // ... any other utility methods ...
 }
 
 module.exports = new DBQueries();
